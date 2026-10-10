@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keerthana and Robin Engagement</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=DM+Sans:wght@400;500&family=DM+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<canvas id="motes" aria-hidden="true"></canvas>
+<canvas id="burst" aria-hidden="true"></canvas>
+
+<main>
+  <header class="hero wrap" id="top">
+    <h1 class="eyebrow">He has made everything beautiful in its time. Ecclesiastes 3:11</h1>
+
+    <svg class="rings" viewBox="0 0 220 120" role="img" aria-label="Two interlocked rings with a diamond">
+      <defs>
+        <linearGradient id="goldLine" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" style="stop-color: var(--gold)"/>
+          <stop offset="1" style="stop-color: #fff0cf"/>
+        </linearGradient>
+        <linearGradient id="roseLine" x1="1" y1="0" x2="0" y2="1">
+          <stop offset="0" style="stop-color: var(--rose)"/>
+          <stop offset="1" style="stop-color: var(--gold)"/>
+        </linearGradient>
+      </defs>
+      <circle class="ring ring-a" pathLength="1" cx="84" cy="72" r="42"/>
+      <circle class="ring ring-b" pathLength="1" cx="136" cy="72" r="42"/>
+      <polygon class="gem" points="136,10 148,22 136,34 124,22"/>
+      <g>
+        <line class="spark" x1="158" y1="8" x2="158" y2="20"/>
+        <line class="spark" x1="152" y1="14" x2="164" y2="14"/>
+      </g>
+    </svg>
+
+    <h1 class="names" aria-label="Keerthana and Robin">
+      <span class="name" data-split>Keerthana</span>
+      <span class="amp" aria-hidden="true">&amp;</span>
+      <span class="name" data-split>Robin</span>
+    </h1>
+
+    <p class="lead">are getting engaged, and would love to celebrate the evening with you.</p>
+
+    <div class="date-line" data-event="2026-10-21T18:30:00+05:30">
+      <span>Wednesday</span>
+      <span class="sep" aria-hidden="true"></span>
+      <b>21 . 10 . 2026</b>
+      <span class="sep" aria-hidden="true"></span>
+      <span>6:00 PM</span>
+    </div>
+
+    <a class="cta" href="#rsvp"><span>RSVP</span><span class="arr">→</span></a>
+  </header>
+
+  <section class="count wrap reveal" aria-labelledby="count-h">
+    <p class="eyebrow" id="count-h">Until the ring ceremony</p>
+    <div class="count-grid" id="count-grid" role="timer" aria-live="off">
+      <div class="unit"><span class="num" id="cd-d">00</span><span class="lbl">Days</span></div>
+      <div class="unit"><span class="num" id="cd-h">00</span><span class="lbl">Hours</span></div>
+      <div class="unit"><span class="num" id="cd-m">00</span><span class="lbl">Minutes</span></div>
+      <div class="unit"><span class="num" id="cd-s">00</span><span class="lbl">Seconds</span></div>
+    </div>
+    <p class="count-done" id="count-done" hidden></p>
+  </section>
+
+  <section class="evening wrap" aria-labelledby="eve-h">
+    <div class="reveal">
+      <div class="col-head">
+        <p class="eyebrow">The evening</p>
+        <h2 id="eve-h">An evening of rings, music and long tables</h2>
+      </div>
+      <ol class="timeline">
+        <li><time>6:00 PM</time><i></i><div><h3>Arrival and welcome</h3><p>Prayer and word of God</p></div></li>
+        <li><time>7:15 PM</time><i></i><div><h3>Ring ceremony</h3><p>The exchange of rings. </p></div></li>
+        <li><time>8:30 PM</time><i></i><div><h3>Dinner</h3><p>A shared feast, served family style.</p></div></li>
+      </ol>
+    </div>
+
+    <aside class="side reveal">
+      <div class="panel">
+        <p class="eyebrow">Venue</p>
+        <h3>Viswanath Gardens</h3>
+        <address class="addr" id="addr">J.P.Nagar, HMT Road, OPP:, double road, Prasanth Nagar, Miyapur<br>Hyderabad 500049</address>
+        <div class="row">
+          <a class="btn solid" href="https://maps.app.goo.gl/Yrwp2ZqKKwbU3YAL7" target="_blank" rel="noopener">Open in Maps</a>
+          <button class="btn" type="button" id="copy-addr">Copy address</button>
+        </div>
+      </div>
+      
+      </div>
+    </aside>
+  </section>
+
+  <section class="rsvp wrap reveal" id="rsvp" aria-labelledby="rsvp-h">
+    <div class="card">
+      <header>
+        <p class="eyebrow">Kindly reply by 15 October</p>
+        <h2 id="rsvp-h">Will you join us?</h2>
+        <p>Tell us who is coming so we can set your place at the table.</p>
+      </header>
+
+      <form id="rsvp-form" novalidate>
+        <div class="field">
+          <label for="rsvp-name">Your name</label>
+          <input type="text" id="rsvp-name" name="name" placeholder="Full name" autocomplete="name">
+          <p class="err" id="name-err" hidden>Please enter your name so we know who is replying.</p>
+        </div>
+
+        <fieldset class="field">
+          <legend>Your reply</legend>
+          <div class="seg">
+            <input type="radio" id="att-yes" name="attend" value="yes" checked>
+            <label for="att-yes">Joyfully accept</label>
+            <input type="radio" id="att-no" name="attend" value="no">
+            <label for="att-no">Regretfully decline</label>
+          </div>
+        </fieldset>
+
+        <div class="field" id="guest-field">
+          <label for="guest-count">Number of guests, including you</label>
+          <div class="stepper">
+            <button type="button" id="g-minus" aria-label="One fewer guest">&minus;</button>
+            <output id="guest-count" aria-live="polite">1</output>
+            <button type="button" id="g-plus" aria-label="One more guest">+</button>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="rsvp-note">A note for the couple (optional)</label>
+          <textarea id="rsvp-note" name="note" placeholder="Dietary needs, a blessing, a song request"></textarea>
+        </div>
+
+        <button class="btn solid submit" type="submit" id="submit-btn">Send my reply</button>
+      </form>
+
+      <div class="thanks" id="thanks" data-whatsapp="" hidden>
+        <h3 id="thanks-h">Thank you</h3>
+        <p id="thanks-p"></p>
+        <textarea id="reply-text" readonly aria-label="Your reply message"></textarea>
+        <div class="row">
+          <a class="btn solid" id="wa-link" href="https://wa.me/" target="_blank" rel="noopener">Send on WhatsApp</a>
+          <button class="btn" type="button" id="copy-reply">Copy reply</button>
+          <button class="btn" type="button" id="edit-reply">Edit reply</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p class="sig">With love, the Batthula family</p>
+  <small>Srinu, Rosy &amp; Nischal  &middot; 21.10.2026</small>
+</footer>
+
+<script src="script.js" defer></script>
+
+</body>
+</html>
